@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-01-14T20:34:46 WIB" name="Java Testing" finished-at="2026-01-14T20:34:55 WIB" duration-ms="9388">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.testing.runner.RunnerTest@1139b2f3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2026-01-14T20:34:46 WIB" name="Basic Test" finished-at="2026-01-14T20:34:55 WIB" duration-ms="9388">
+      <class name="com.testing.runner.RunnerTest">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.testing.runner.RunnerTest@1139b2f3]" started-at="2026-01-14T20:34:46 WIB" name="setUpClass" finished-at="2026-01-14T20:34:48 WIB" duration-ms="2156" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3daa82be]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.testing.runner.RunnerTest@1139b2f3]" started-at="2026-01-14T20:34:48 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-14T20:34:50 WIB" duration-ms="1890" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login berhasil dengan akun yang terdaftar."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Test Case Login saucedemo"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.testing.runner.RunnerTest@1139b2f3]" started-at="2026-01-14T20:34:50 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-14T20:34:50 WIB" duration-ms="112" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login berhasil dengan akun yang terdaftar."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Test Case Login saucedemo"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.testing.runner.RunnerTest@1139b2f3]" started-at="2026-01-14T20:34:50 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-14T20:34:50 WIB" duration-ms="86" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login berhasil dengan akun yang terdaftar."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Test Case Login saucedemo"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.testing.runner.RunnerTest@1139b2f3]" started-at="2026-01-14T20:34:50 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-14T20:34:50 WIB" duration-ms="81" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login berhasil dengan akun yang terdaftar."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Test Case Login saucedemo"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.testing.runner.RunnerTest@1139b2f3]" started-at="2026-01-14T20:34:50 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-14T20:34:50 WIB" duration-ms="108" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login berhasil dengan akun yang terdaftar."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Test Case Login saucedemo"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.testing.runner.RunnerTest@1139b2f3]" started-at="2026-01-14T20:34:50 WIB" name="tearDownClass" finished-at="2026-01-14T20:34:55 WIB" duration-ms="4928" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.testing.runner.RunnerTest -->
+    </test> <!-- Basic Test -->
+  </suite> <!-- Java Testing -->
+</testng-results>
