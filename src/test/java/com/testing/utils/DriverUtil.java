@@ -17,23 +17,20 @@ public class DriverUtil {
         browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
                 .setHeadless(false)
                 .setArgs(java.util.Arrays.asList("--start-maximized")));
+
         context = browser.newContext(new Browser.NewContextOptions()
-                .setViewportSize(null));
+                .setViewportSize(null)); 
         page = context.newPage();
     }
 
-    public static void destroy(){
-        if (page != null) {
-            page.close();
-        }
-        if (context != null) {
-            context.close();
-        }
-        if (browser != null) {
-            browser.close();
-        }
-        if (playwright != null) {
-            playwright.close();
-        }
+    public static Page getPage() {
+        return page;
+    }
+
+    public static void destroy() {
+        if (page != null) page.close();
+        if (context != null) context.close();
+        if (browser != null) browser.close();
+        if (playwright != null) playwright.close();
     }
 }
