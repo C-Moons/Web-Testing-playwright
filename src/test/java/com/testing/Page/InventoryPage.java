@@ -12,7 +12,7 @@ public class InventoryPage extends BasePage implements IPageComponent {
     
     private final Locator productSort;
     private final Locator priceOfProducts;
-    private final Locator textHeader;
+    private final Locator inventoryItemName;
 
     public InventoryPage(Page page) {
         super(page);
@@ -24,7 +24,8 @@ public class InventoryPage extends BasePage implements IPageComponent {
         
         this.productSort = page.locator("[data-test='product-sort-container']");
         this.priceOfProducts = page.locator(".inventory_item_price");
-        this.textHeader = page.locator(".title");
+        this.inventoryItemName = page.locator("[data-test='inventory-item-name']");
+
     }
 
     
@@ -41,4 +42,35 @@ public class InventoryPage extends BasePage implements IPageComponent {
         return "/" + path[path.length - 1];
     }
 
+    private String formatProductNameForDataTest(String productName) {
+        return productName.toLowerCase().replace(" ", "-");
+    }
+//button add to cart & nama produk dinamis
+    public void addToCart(String productName) {
+        String dataTestSelector = "add-to-cart-" + formatProductNameForDataTest(productName);
+        Locator addToCartButton = page.locator("[data-test='" + dataTestSelector + "']");
+        addToCartButton.click();
+    }
+
+//Sorting
+    public void sortingByValue(String urutan){
+        String sortValue = "";
+        if (urutan.contains("low to high"))
+            sortValue = "lohi";
+        else if (urutan.contains("high to low"))
+            sortValue = "hilo";
+        else if (urutan.contains("Z to A"))
+            sortValue = "za";
+        else
+            sortValue = "az";
+        waitingElementReady(productSort).selectOption(sortValue);
+    }
+
+    public String getFirstProductName(){
+        return inventoryItemName.first().textContent();
+    }
+
+    public String getFirstProductPrice(){
+        return priceOfProducts.first().textContent();
+    }
 }

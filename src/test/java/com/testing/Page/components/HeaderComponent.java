@@ -4,15 +4,19 @@ import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 
 public class HeaderComponent extends BaseComponent{
-    private final Locator cartIcon;
+    private final Locator shoppingCartBadge;
 
     public HeaderComponent(Page page) {
         super(page);
-        // Selector sesuai data-test di foto lo
-        this.cartIcon = page.locator("[data-test='shopping-cart-badge']");
+        
+        this.shoppingCartBadge = page.locator(".shopping_cart_badge");
     }
 
     public boolean isCartVisible() {
-        return waitingElementReady(cartIcon).isVisible();
+        return waitingElementReady(shoppingCartBadge).isVisible();
+    }
+
+        public String getShoppingCartBadgeValue() {
+        return shoppingCartBadge.textContent();
     }
 }

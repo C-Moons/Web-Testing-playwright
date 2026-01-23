@@ -3,7 +3,7 @@ package com.testing.runner;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
-@CucumberOptions(features = {"src/test/resources/features/LoginTest.feature"},
+@CucumberOptions(features = {"src/test/resources/features/LoginTest.feature", "src/test/resources/features/AddtoCartTest.feature", "src/test/resources/features/SortingTest.feature"},
     glue = {
                 "com.testing.definition",
                 "com.testing.hook",
