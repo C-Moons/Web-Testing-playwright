@@ -17,6 +17,9 @@ public class HeaderComponent extends BaseComponent{
     }
 
         public String getShoppingCartBadgeValue() {
-        return shoppingCartBadge.textContent();
+        if (shoppingCartBadge.isVisible()) {
+            return shoppingCartBadge.textContent();
+        }
+        return "";
     }
 }

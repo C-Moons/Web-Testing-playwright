@@ -45,11 +45,26 @@ public class InventoryPage extends BasePage implements IPageComponent {
     private String formatProductNameForDataTest(String productName) {
         return productName.toLowerCase().replace(" ", "-");
     }
-//button add to cart & nama produk dinamis
+
     public void addToCart(String productName) {
-        String dataTestSelector = "add-to-cart-" + formatProductNameForDataTest(productName);
-        Locator addToCartButton = page.locator("[data-test='" + dataTestSelector + "']");
+        String removeSelector = "[data-test='remove-" + formatProductNameForDataTest(productName) + "']";
+        Locator removeButton = page.locator(removeSelector);
+        if (removeButton.isVisible()) {
+            return;
+        }
+        String addSelector = "add-to-cart-" + formatProductNameForDataTest(productName);
+        Locator addToCartButton = page.locator("[data-test='" + addSelector + "']");
         addToCartButton.click();
+    }
+
+//remove button
+    public void removeProductButton(String productName) {
+        String dataTestSelector = "remove-" + formatProductNameForDataTest(productName);
+        Locator removeButtonInventory = page.locator("[data-test='" + dataTestSelector + "']");
+
+        if (removeButtonInventory.isVisible()) {
+            removeButtonInventory.click();
+        }
     }
 
 //Sorting
