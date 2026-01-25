@@ -9,7 +9,6 @@ import com.testing.utils.DriverUtil;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 
 public class DeleteProductInventoryDefiniton {
 
@@ -17,7 +16,7 @@ public class DeleteProductInventoryDefiniton {
     private InventoryPage inventoryPage = new InventoryPage(DriverUtil.getPage());
 
     @Given("Saya melakukan login dengan username {string} & password {string} dan berada di halaman Invetory.")
-    public void accessBrowserAndLoginPage(String username, String pass){
+    public void accessBrowserAndLoginPage(String username, String pass) {
         DriverUtil.getPage().navigate("https://www.saucedemo.com/");
         loginPage.inputUsername(username);
         loginPage.inputPassword(pass);
@@ -26,13 +25,13 @@ public class DeleteProductInventoryDefiniton {
     }
 
     @And("Saya menekan tombol Remove pada produk {string}.")
-    public void pressRemoveButton(String productname){
+    public void pressRemoveButton(String productname) {
         inventoryPage.removeProductButton(productname);
     }
 
     @Then("Ikon keranjang belanja menunjukkan {string}.")
-    public void cartIconShowsNumber(String count){
-        Assert.assertEquals(inventoryPage.getHeaderComponent().getShoppingCartBadgeValue().isEmpty(), count);
+    public void cartIconShowsNumber(String count) {
+        Assert.assertEquals(inventoryPage.getHeaderComponent().getShoppingCartBadgeValue(), count);
     }
 
 }

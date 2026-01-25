@@ -26,7 +26,10 @@ public class AddToCartTestDefinition {
 
     @When("Saya menekan tombol Add to cart pada produk {string}.")
     public void iPressTheAddToCartButtonOnTheProduct(String productName) {
-        inventoryPage.addToCart(productName);
+        String[] products = productName.split(" & ");
+        for (String product : products) {
+            inventoryPage.addToCart(product.trim());
+        }
     }
 
     @Then("Ikon keranjang belanja menunjukkan angka {string}.")
@@ -34,5 +37,4 @@ public class AddToCartTestDefinition {
         Assert.assertEquals(inventoryPage.getHeaderComponent().getShoppingCartBadgeValue(), count);
     }
 
-    
 }
