@@ -124,11 +124,19 @@ mvn test -Dtest=RunnerTest
 
 ## 📊 Laporan Pengujian
 
-Setelah pengujian selesai, laporan akan dibuat secara otomatis di direktori `target/`.
+Setelah pengujian selesai, laporan akan dibuat secara otomatis di direktori `ExtentReports`.
 
-- **Cucumber HTML Report**: `target/cucumber-report-html/cucumber-html-reports/overview-features.html`
 - **Extent Report**: `ExtentReports/`.
-- **Surefire Reports**: `target/surefire-reports/`.
+
+### Extent Report
+![Extent Report](./.github/images/Report1.png)
+
+### Extent Report (Screenshots report)
+![Extent Report](./.github/images/Report2.png)
+
+### Extent Report (Environment)
+![Extent Report](./.github/images/Report3.png)
+
 
 ---
 
